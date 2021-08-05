@@ -30,7 +30,6 @@ export default function App(){
     }
 
     useEffect(() => {
-        console.log("Token: ", token)
         if (token){
             axios({
                 method: 'GET',
@@ -42,7 +41,6 @@ export default function App(){
                 if (res.data.message === false){
                     window.localStorage.clear();
                 }else{
-                    console.log("App Res: ", res);
                     setCurrentUser(res.data.user);
                 }
             });
