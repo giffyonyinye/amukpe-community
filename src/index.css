@@ -188,3 +188,8 @@
     -webkit-animation: spin-animation 0.4s infinite linear;
     animation: spin-animation 0.4s infinite linear;
 }
+
+.contactform_card{
+    border: 1px solid var(--main-color);
+    padding: 10px;
+}

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import 'mdbootstrap/css/bootstrap.css';
 import 'mdbootstrap/css/mdb.css';
 import './index.css';
-import './media.css';
 import App from './App';
+import './media.css';
 
 ReactDOM.render(
 	<React.StrictMode>

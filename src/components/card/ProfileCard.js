@@ -39,9 +39,10 @@ const ProfileCard = ({current_user, devURL, devApi, token}) => {
 
 					{
 						showModal?
-						<AddJobModal
+						<CVModal
 							toggleModal={toggleModal}
 							current_user={current_user}
+							devApi={devApi}
 						/>
 						:''
 					}
@@ -72,19 +73,19 @@ const ProfileCard = ({current_user, devURL, devApi, token}) => {
 								{
 									current_user.gender !== undefined?
 									<span>
-										Gender: ${current_user.gender}
+										Gender: {current_user.gender}
 									</span>:''
 								}
 								{
 									current_user.number !== undefined?
 									<span>
-										Contact: ${current_user.number}
+										Contact: {current_user.number}
 									</span>:''
 								}
 								{
 									current_user.qualification !== undefined?
 									<span>
-										Qualification: ${current_user.qualification}
+										Qualification: {current_user.qualification}
 									</span>:''
 								}
 								{
@@ -180,7 +181,7 @@ const ProfileCard = ({current_user, devURL, devApi, token}) => {
 	)
 }
 
-const AddJobModal = ({toggleModal, current_user}) => {
+const CVModal = ({toggleModal, current_user, devApi}) => {
 
 	Modal.setAppElement('#root');
 	return(
@@ -189,6 +190,7 @@ const AddJobModal = ({toggleModal, current_user}) => {
 			className="resumeModal"
 			overlayClassName="add_job_modaloverlay"
 			closeTimeoutMS={1000000}
+			onRequestClose={toggleModal}
 		>
 			<div className="header">
 				<p>
@@ -198,22 +200,26 @@ const AddJobModal = ({toggleModal, current_user}) => {
 					/>
 				</p>
 			</div>
-			<div className="body">
-				<object
-					data="http://africau.edu/images/default/sample.pdf"
-					type="application/pdf"
-					style={{
-						width: "100%",
-						height: "100%"
-					}}
+			<object
+				data={`${devApi}document/${current_user.cv}/`}
+				type="application/pdf"
+				width="100%"
+				height="100%"
+			>
+				<iframe
+					src={`${devApi}document/${current_user.cv}/`}
+					title="userCV"
+					width="100%"
+					height="100%"
+					style={{border: "none"}}
 				>
 					<p>
-						Alternative text - include a link 
-						<a href="http://africau.edu/images/default/sample.pdf">
-						to the PDF!</a>
+						Your Browser Does Not Support PDF's
+						<a href={`${devApi}document/${current_user.cv}/`}>
+						Download The PDF</a>
 					</p>
-				</object>
-			</div>
+				</iframe>
+			</object>
 		</Modal>
 	)
 }

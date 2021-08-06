@@ -317,7 +317,14 @@ const AdminJobsCard = ({toggleModal, current_user, token, devApi,
 											devURL={devURL}
 										/>
 									)
-								}):''
+								}):
+								<p
+									style={{
+										fontFamily: "var(--arima)"
+									}}
+								>
+									No Applicants For This Job
+								</p>
 							}
 						</div>
 						<br />
@@ -397,7 +404,7 @@ const EditModal = ({toggleModal, job, token, devApi, setJob}) => {
 	return (
 		<Modal
 			isOpen={true}
-			className="add_job_modal"
+			className="add_job_modal admin__dashboardmodal"
 			overlayClassName="add_job_modaloverlay"
 			closeTimeoutMS={1000000}
 		>

@@ -10,6 +10,7 @@ import Navbar from "./components/navigation/Navbar";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import JobOpenings from "./pages/JobOpenings";
+import Contact from "./pages/Contact";
 import axios from "axios";
 
 // const prodApi = "http://localhost:9500/api/";
@@ -76,7 +77,8 @@ export default function App(){
                         />
                     </Route>
                     <Route exact path="/contact">
-                        <h1>contact us</h1>
+                        <Contact
+                        />
                     </Route>
                     <Route exact path="/jobopenings">
                         <JobOpenings

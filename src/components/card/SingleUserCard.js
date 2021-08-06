@@ -4,9 +4,12 @@ import AvatarImg from "../../assets/img/avatar.png";
 import Moment from "react-moment";
 import {Link} from "react-router-dom";
 import LoadingDiv from "../misc/LoadingDiv";
+import Modal from "react-modal";
+import * as TiIcons from "react-icons/ti";
 
 const SingleUserCard = ({token, devApi, devURL, current_user}) => {
 
+	const [showModal, setShowModal] = useState(false);
 	const [loading, setLoading] = useState(true);
 	const [user, setUser] = useState(null);
 	const [appliedJobs, setAppliedJobs] = useState([]);
@@ -35,6 +38,11 @@ const SingleUserCard = ({token, devApi, devURL, current_user}) => {
 
 	}, [token, devApi])
 
+	const toggleModal = (e) => {
+		e.preventDefault();
+		setShowModal(!showModal);
+	}
+
 	return (
 		<div className="col-xl-5 pl-2 pr-1">
 			<div className="card profile__card">
@@ -46,6 +54,15 @@ const SingleUserCard = ({token, devApi, devURL, current_user}) => {
 					{
 						user !== null?
 						<>
+							{
+								showModal?
+								<CVModal
+									toggleModal={toggleModal}
+									user={user}
+									devApi={devApi}
+								/>
+								:''
+							}
 							<div className="header">
 								{
 									user.profile_picture === "default.webp"?
@@ -71,26 +88,28 @@ const SingleUserCard = ({token, devApi, devURL, current_user}) => {
 									{
 										user.gender !== undefined?
 										<span>
-											Gender: ${user.gender}
+											Gender: {user.gender}
 										</span>:''
 									}
 									{
 										user.number !== undefined?
 										<span>
-											Contact: ${user.number}
+											Contact: {user.number}
 										</span>:''
 									}
 									{
 										user.qualification !== undefined?
 										<span>
-											Qualification: ${user.qualification}
+											Qualification: {user.qualification}
 										</span>:''
 									}
 									{
 										user.cv !== undefined?
 										<span>Resume: 
 											<Link
-												to={`/preview/file/${user.cv}/`}> 
+												to={`/preview/file/${user.cv}/`}
+												onClick={toggleModal}
+											> 
 													{user.cv}
 											</Link>
 										</span>:''
@@ -98,7 +117,7 @@ const SingleUserCard = ({token, devApi, devURL, current_user}) => {
 								</p>
 							</div>
 							<div className="body">
-													<div
+								<div
 									className="divider"
 									style={{
 										marginTop: "0px",
@@ -183,6 +202,49 @@ const SingleUserCard = ({token, devApi, devURL, current_user}) => {
 				}
 			</div>
 		</div>
+	)
+}
+
+const CVModal = ({toggleModal, user, devApi}) => {
+
+	Modal.setAppElement('#root');
+	return(
+		<Modal
+			isOpen={true}
+			className="resumeModal"
+			overlayClassName="add_job_modaloverlay"
+			closeTimeoutMS={1000000}
+			onRequestClose={toggleModal}
+		>
+			<div className="header">
+				<p>
+					{user.firstname} {user.lastname} Resume
+					<TiIcons.TiTimes
+						onClick={toggleModal}
+					/>
+				</p>
+			</div>
+			<object
+				data={`${devApi}document/${user.cv}/`}
+				type="application/pdf"
+				width="100%"
+				height="100%"
+			>
+				<iframe
+					src={`${devApi}document/${user.cv}/`}
+					title="userCV"
+					width="100%"
+					height="100%"
+					style={{border: "none"}}
+				>
+					<p>
+						Your Browser Does Not Support PDF's
+						<a href={`${devApi}document/${user.cv}/`}>
+						Download The PDF</a>
+					</p>
+				</iframe>
+			</object>
+		</Modal>
 	)
 }
 

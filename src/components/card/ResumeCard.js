@@ -87,9 +87,7 @@ const ResumeCard = ({current_user, token, devApi, reloadUser}) => {
 										id="cv_fileupload"
 										className="resume_fileupload"
 										required={true}
-										accept=".doc, .docx, application/pdf, application/msword, 
-											application/vnd.openxmlformats-officedocument.
-											wordprocessingml.document"
+										accept="application/pdf"
 										onChange={(e) => setCv(e.target.files[0])}
 									/>
 								</div>

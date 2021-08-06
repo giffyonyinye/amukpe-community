@@ -12,7 +12,7 @@ const Home = () => {
 					<br />
 					<p className="subheader_text">
 						Creating Awareness and Opportunities in Amukpe Community.
-						Oneness is strength, love and progress.
+						Oneness is strength, love and progress - New Update
 					</p>
 
 					<br />
@@ -88,16 +88,25 @@ const Home = () => {
 					<h2 className="header_text">What We Are</h2>
 					<br />
 					<p className="subheader_text">
-						Amukpe Community is a communitty in Sapele Delta State. With love and 
-						unity dvfyd yfewu udhfh gdtf ht id tihin sth reasdon why you didnet shwi 
-						iup T my place the otehr cay dont get uoddatedn eith the sstory of this 
-						comunity we lovwe to keep it real and smooth all the dy of i
+						Amukpe Community is a communitty in Sapele Delta State. 
+						With love and 
+						unity dvfyd yfewu udhfh gdtf ht id tihin sth reasdon why 
+						you didnet shwi 
+						iup T my place the otehr cay dont get uoddatedn eith the 
+						sstory of this 
+						comunity we lovwe to keep it real and smooth all the dy 
+						of i
 						ut lives and 
-						lives with it as kive hasa offered us with so much opportunities, dot sir 
-						nad thunj that theh sroyt witg tr xgan an minert frim nie si that teh oeiolw 
-						iof the kabn will yhfeuy yqyr ncgyewc the goodsa nd service if tey sdgfy 
-						asjjyf yasid the minerb uu gdewv hkw qace thia sshidte i wiiudlf nt caome 
-						back agian foir any reason s tat i iwill gaev my sdyfgyjc'
+						lives with it as kive hasa offered us with so much 
+						opportunities, dot sir 
+						nad thunj that theh sroyt witg tr xgan an minert frim 
+						nie si that teh oeiolw 
+						iof the kabn will yhfeuy yqyr ncgyewc the goodsa nd 
+						service if tey sdgfy 
+						asjjyf yasid the minerb uu gdewv hkw qace thia sshidte i 
+						wiiudlf nt caome 
+						back agian foir any reason s tat i iwill gaev my 
+						sdyfgyjc'
 					</p>
 
 					<br />

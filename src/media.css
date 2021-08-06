@@ -1,3 +1,18 @@
+@media (max-width: 991px){
+	.add_job_modal.admin__dashboardmodal{
+		width: 60%;
+		height: 70%;
+	}
+}
+
+@media (max-width: 650px){
+	.add_job_modal.admin__dashboardmodal{
+		width: 90%;
+		height: 70%;
+		left: 47%;
+	}	
+}
+
 @media (min-width: 601px){
 	.dropdown_nav{
 		display: none!important;
@@ -138,5 +153,12 @@
 	    font-size: 14px;
 	    color: black;
 	    font-weight: 300!important;
+	}
+	.add_job_modal.admin__dashboardmodal{
+		width: 100%;
+		height: 100%;
+		top: 0%;
+		left: 0%;
+		transform: translate(0%, 0%);
 	}
 }
