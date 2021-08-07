@@ -357,7 +357,7 @@
 	-o-user-select: none;
 }
 .add_job_modal.admin__dashboardmodal{
-	width: 50%;
+	width: 40%;
 	height: 70%;
 	overflow-y: scroll;
 }
