@@ -291,3 +291,24 @@
     font-size: 17px;
     margin-bottom: 35px;
 }
+
+.contact__form{
+    border: 1px solid red;
+}
+.contact__form .header{
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid green;
+}
+.contact__form .header p{
+    margin-bottom: 0px;
+    font-family: var(--arima);
+    font-size: 16px;
+    border: 1px solid red;
+    display: block;
+}
+.contact__form .header p i{
+    font-style: normal;
+    margin-right: 5px;
+}

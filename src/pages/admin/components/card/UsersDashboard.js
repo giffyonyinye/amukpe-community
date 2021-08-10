@@ -60,7 +60,7 @@ const SingleUser = ({user, devURL}) => {
 	return (
 		<>
 			{
-				user.email !== "admin@gmail.com"?
+				user.email !== "amukpedistrict@gmail.com"?
 				<div className="card job_dashboard_singlecards">
 					{
 						user.profile_picture === "default.webp"?

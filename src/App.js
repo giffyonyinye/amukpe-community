@@ -13,10 +13,10 @@ import JobOpenings from "./pages/JobOpenings";
 import Contact from "./pages/Contact";
 import axios from "axios";
 
-// const prodApi = "http://localhost:9500/api/";
-// const prodURL = "http://localhost:9500/";
-const prodApi = "https://amukpe.herokuapp.com/api/";
-const prodURL = "https://amukpe.herokuapp.com/";
+const prodApi = "http://localhost:9500/api/";
+const prodURL = "http://localhost:9500/";
+// const prodApi = "https://amukpe.herokuapp.com/api/";
+// const prodURL = "https://amukpe.herokuapp.com/";
 
 export default function App(){
 

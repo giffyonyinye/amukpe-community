@@ -4,16 +4,18 @@ import Modal from 'react-modal';
 import * as ImIcons from "react-icons/im";
 import * as TiIcons from "react-icons/ti";
 import Moment from 'react-moment';
-import {Link, Redirect} from "react-router-dom";
+import {Link, Redirect, withRouter} from "react-router-dom";
 import LoadingDiv from "../misc/LoadingDiv";
 
-const SingleJobCard = ({current_user, token, devApi, devURL, reloadUser, reloadSidebarJob}) => {
+const SingleJobCard = ({current_user, token, devApi, devURL,
+	reloadUser, reloadSidebarJob}) => {
 
 	const [loading, setLoading] = useState(true);
 	const [job, setJob] = useState(null);
 	const [editJobModal, setEditJobModal] = useState(false);
 	const [deleted, setDeleted] = useState(false);
 	const [notFound, setNotFound] = useState(false);
+	const id = window.location.pathname.split('/')[3];
 
 	const toggleModal = () => {
 		console.log("Togggling....")
@@ -21,7 +23,6 @@ const SingleJobCard = ({current_user, token, devApi, devURL, reloadUser, reloadS
 	}
 
 	useEffect(() => {
-		const id = window.location.pathname.split('/')[3];
 		axios({
 			method: "GET",
 			headers: {
@@ -36,7 +37,7 @@ const SingleJobCard = ({current_user, token, devApi, devURL, reloadUser, reloadS
 			}
 			setLoading(false);
 		});
-	}, [token, devApi]);
+	}, [token, devApi, id]);
 
 	const reloadJob = () => {
 		const id = window.location.pathname.split('/')[3];
@@ -91,7 +92,7 @@ const SingleJobCard = ({current_user, token, devApi, devURL, reloadUser, reloadS
 									:
 									<>
 									{
-										current_user.password !== "admin_login_id"?
+										current_user.password !== "dukeofamukpe*"?
 										<UserJobsCard
 											current_user={current_user}
 											token={token}
@@ -526,4 +527,4 @@ const ApplicantsCard = ({user, devURL}) => {
 	)
 }
 
-export default SingleJobCard;
+export default withRouter(SingleJobCard);
