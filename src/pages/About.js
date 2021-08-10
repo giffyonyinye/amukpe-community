@@ -1,8 +1,5 @@
 import Footer from "../components/navigation/Footer";
 import AboutImg from "../assets/img/job.svg";
-import * as FiIcons from "react-icons/fi";
-import * as AiIcons from "react-icons/ai";
-import * as GoIcons from "react-icons/go";
 
 const About = () => {
 
@@ -25,6 +22,7 @@ const About = () => {
 						<img
 							src={AboutImg}
 							className="img-fluid"
+							alt="aboutImg"
 						/>
 					</div>
 					<div className="col-xl-7 col-lg-7 col-md-4 col-sm-6">

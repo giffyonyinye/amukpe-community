@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 import Moment from "react-moment";
+import Footer from "../components/navigation/Footer";
 
 const JobOpenings = ({devApi, devURL}) => {
 
@@ -18,28 +19,31 @@ const JobOpenings = ({devApi, devURL}) => {
 	}, [devApi]);
 
 	return (
-		<div className="container-fluid custom__container pt-5">
-			<div className="row justify-content-start">
-				<div className="col-xl-5 col-lg-6 
-					col-md-7 col-sm-8 col-12">
-					{
-						jobs.length !== 0?
-						jobs.map((value, index) => {
-							return (
-								<JobSingleCard
-									job={value}
-									key={index}
-									devURL={devURL}
-								/>
-							)
-						}):''
-					}
+		<>
+			<div className="container-fluid custom__container pt-5">
+				<div className="row justify-content-start">
+					<div className="col-xl-5 col-lg-6 
+						col-md-7 col-sm-8 col-12">
+						{
+							jobs.length !== 0?
+							jobs.map((value, index) => {
+								return (
+									<JobSingleCard
+										job={value}
+										key={index}
+										devURL={devURL}
+									/>
+								)
+							}):''
+						}
+					</div>
 				</div>
+				<br />
+				<br />
+				<br />
 			</div>
-			<br />
-			<br />
-			<br />
-		</div>
+			<Footer />
+		</>
 	)
 }
 
