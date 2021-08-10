@@ -76,7 +76,7 @@ const DashboardCard = ({current_user, devApi, token, changedPassword,
 								{
 									current_user.cv === undefined?
 									'':
-									<Link to="/job/applied">
+									<Link to="/dashboard/profile">
 										View Resume <BsIcons.BsChevronDoubleRight />
 									</Link>
 								}

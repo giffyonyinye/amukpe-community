@@ -293,22 +293,57 @@
 }
 
 .contact__form{
-    border: 1px solid red;
+    border: 2px solid var(--main-color);
+    margin-bottom: 10px;
 }
-.contact__form .header{
+.contact__form .body{
     padding: 5px;
-    padding-left: 15px;
+    padding-left: 20px;
     padding-right: 15px;
-    border: 1px solid green;
+    padding-top: 20px;
 }
-.contact__form .header p{
+.contact__form .body p{
     margin-bottom: 0px;
     font-family: var(--arima);
     font-size: 16px;
-    border: 1px solid red;
+    border: none;
     display: block;
 }
-.contact__form .header p i{
+.contact__form .body p span{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.contact__form .body p span:last-child{
+    padding-left: 20px;
+}
+.contact__form .body p i{
     font-style: normal;
     margin-right: 5px;
+    background-color: var(--main-color);
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    border-radius: 3px;
+}
+
+.comunity_card{
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: none;
+}
+.comunity_card .body p#header{
+    font-family: var(--alegreya);
+    font-size: 18px;
+    border-bottom: 3px solid var(--main-color);
+    display: inline-flex;
+}
+.comunity_card .body span{
+    font-family: var(--arima);
+    display: block;
+    padding-left: 10px;
+    font-size: 16px;
 }

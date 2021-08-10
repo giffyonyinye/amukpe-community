@@ -425,6 +425,11 @@
 .dashboard_card.singlejob__card .header{
 	display: flex;
 }
+.dashboard_card.singlejob__card .header p{
+	font-family: var(--alegreya);
+	font-size: 17px;
+	padding-top: 3px;
+}
 .dashboard_card.singlejob__card .header img{
 	width: 35px;
 	height: 33px;
