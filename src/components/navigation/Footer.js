@@ -12,8 +12,8 @@ const Footer = () => {
 					<p className="mynametitle">What Are We?</p>
 					<span>
 						Amukpe Community is established to create 
-						awareness and job opportunities to indigenes 
-						and non-indigenes in the community and beyond.
+						awareness and job opportunities to Amukpe Community indigenes 
+						and indigenes of Okpe Community at large and in diaspora.
 					</span>
 					<p id="social_icons">
 						<a href="https://whatsapp.com">
