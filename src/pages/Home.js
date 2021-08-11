@@ -25,8 +25,8 @@ const Home = () => {
 							<Link to="/login">	
 								Portal
 							</Link>
-							<Link to="/registration">	
-								Latest Updates
+							<Link to="/register">	
+								Join Now
 							</Link>
 						</div>
 					</div>
@@ -116,7 +116,7 @@ const Home = () => {
 						<br />
 
 						<div className="header_button">
-							<Link to="/jobopening">	
+							<Link to="/jobopenings">	
 								Apply
 							</Link>
 						</div>
