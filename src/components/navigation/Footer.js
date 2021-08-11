@@ -50,34 +50,34 @@ const Footer = () => {
 
 					<ul className="list-unstyled mb-0">
 						<li>
-							<Link to="/blog" className="text-dark">
+							<Link to="/" className="text-dark">
 								Home
 							</Link>
 						</li>
 						<li>
-							<Link to="/blog" className="text-dark">
+							<Link to="/about" className="text-dark">
 								About
 							</Link>
 						</li>
 						<li>
-							<Link to="/feedback" className="text-dark">
+							<Link to="/login" className="text-dark">
 								Sign In
 							</Link>
 						</li>
 						<li>
-							<a href="mailto:ogwunelsondavid@gmail.com"
+							<a href="/jobopenings"
 								className="text-dark">
 								Jobs
 							</a>
 						</li>
 						<li>
-							<a href="mailto:ogwunelsondavid@gmail.com"
+							<a href="/contact"
 								className="text-dark">
 								Contact
 							</a>
 						</li>
 						<li>
-							<a href="mailto:ogwunelsondavid@gmail.com"
+							<a href="/register"
 								className="text-dark">
 								Sign Up
 							</a>
@@ -104,8 +104,9 @@ const Footer = () => {
 						</li>
 						<li>
 							<a
-								href="tel:+2348067263200"
-								className="text-dark">Call Us On: 08067263200</a>
+								href="tel:+2348063361340"
+								className="text-dark">Call Us On: 08063361340</a>
+							<a href="tel:+2348034664025" className="text-dark"> 08034664025 </a>
 						</li>
 					</ul>
 				</div>
