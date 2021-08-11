@@ -30,7 +30,6 @@
     --mada: 'Mada', sans-serif;
 }
 
-* {overflow-x:hidden;}
 
 .header_text{
     color: var(--main-color);
