@@ -37,7 +37,7 @@
 	.custom__header .custom__navbar .navbar__brand{
 		font-size: 19px!important;
 	}
-	.signed {display:"none"}
+	.signed {display:"none";}
 	.dropdown_nav{
 		box-shadow: none;
 		width: 50%;
