@@ -53,7 +53,7 @@ const Home = () => {
 						<br />
 						<p className="subheader_text">
 							Development of youth empowerment schemes, educating youths on self development and learning skills.  
-							We have succeded in creating job opportunities to indigenes and non-indegenes of Okpe community at large.
+							We have succeded in creating job opportunities to Amukpe Community indigenes and indigenes of Okpe community at large.
 						</p>
 
 						<br />
@@ -69,13 +69,22 @@ const Home = () => {
 				<br />
 				<br />
 				<div className="row justify-content-center" id="row3">
+					
+					<div className="col-xl-6 col-lg-5 col-md-6 columns">
+						<img
+							src={AboutUsImg}
+							alt="JOBSVG"
+							className="img-fluid"
+						/>
+					</div>
+
 					<div className="col-xl-5 col-lg-6 col-md-6 columns">
 						<h2 className="header_text">What We Are</h2>
 						<br />
 						<p className="subheader_text">
 							Amukpe Community is a community situated in Sapele Local Government of Delta State. We established this platform to 
 							improve the standard of the community and create awareness to our people. One main aim of this platform
-							is to provide job opportunities to indigenes and non-indigenes of Okpe Kingdom at large and in diaspora. 
+							is to provide job opportunities to Amukpe Community indigenes and indigenes of Okpe Kingdom at large and in diaspora. 
 						</p>
 
 						<br />
@@ -87,13 +96,7 @@ const Home = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="col-xl-6 col-lg-5 col-md-6 columns">
-						<img
-							src={AboutUsImg}
-							alt="JOBSVG"
-							className="img-fluid"
-						/>
-					</div>
+					
 				</div>
 				<br />
 				<div className="row justify-content-center" id="row2">
