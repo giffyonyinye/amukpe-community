@@ -59,13 +59,13 @@ const Navbar = ({activeComponent, token}) => {
 					</li>
 					:
 					<>
-						<li className="nav-item">
+						<li className="nav-item signed">
 							<Link to="/register">
 								<VsIcons.VscSignIn />
 								Sign Up
 							</Link>
 						</li>
-						<li className="nav-item">
+						<li className="nav-item signed">
 							<Link to="/login">
 								<VsIcons.VscSignIn />
 								Sign In
