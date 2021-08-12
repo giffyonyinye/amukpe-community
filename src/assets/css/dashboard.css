@@ -536,6 +536,17 @@
 	background: transparent;
 	color: var(--main-color);
 }
+.job_dashboard_singlecards a#description_link{
+	background-color: transparent;
+	color: blue;
+	font-family: var(--arima);
+	border: none!important;
+	padding: 0px;
+	font-size: 14px;
+}
+.job_dashboard_singlecards a#description_link:hover{
+	filter: brightness(40%);
+}
 
 
 .resumeModal{

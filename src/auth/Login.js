@@ -1,7 +1,7 @@
 import {useState} from "react";
 import * as TiIcons from "react-icons/ti";
 import * as ImIcons from "react-icons/im";
-import * as AiIcons from "react-icons/ai";
+import * as BsIcons from "react-icons/bs";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import community from "../assets/img/community.svg";
@@ -115,7 +115,12 @@ const Login = ({devApi, setUser, setToken}) => {
 														type="button"
 														onClick={toggleShowPassword}
 													>
-														<AiIcons.AiFillEye />
+														{
+															passwordType === "password"?
+															<BsIcons.BsFillEyeFill />
+															:
+															<BsIcons.BsFillEyeSlashFill />
+														}
 													</button>
 												</div>
 												<Link

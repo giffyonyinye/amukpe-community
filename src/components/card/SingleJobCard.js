@@ -6,6 +6,7 @@ import * as TiIcons from "react-icons/ti";
 import Moment from 'react-moment';
 import {Link, Redirect, withRouter} from "react-router-dom";
 import LoadingDiv from "../misc/LoadingDiv";
+import JobDescriptionBody from "../misc/JobDescriptionBody";
 
 const SingleJobCard = ({current_user, token, devApi, devURL,
 	reloadUser, reloadSidebarJob}) => {
@@ -224,7 +225,9 @@ const UserJobsCard = ({toggleModal, current_user, token, devApi,
 						</Moment></strong></span>
 
 						<i id="description_header">Job Description: </i>
-						<span>{job.description}</span>
+						<JobDescriptionBody
+							description={job.description}
+						/>
 						<br />
 
 						{
@@ -298,7 +301,9 @@ const AdminJobsCard = ({toggleModal, current_user, token, devApi,
 						</Moment></strong></span>
 
 						<i id="description_header">Job Description: </i>
-						<span>{job.description}</span>
+						<JobDescriptionBody
+							description={job.description}
+						/>
 						<Link
 							to="/job/applicants"
 							id="view_application"

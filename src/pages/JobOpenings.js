@@ -3,6 +3,7 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 import Moment from "react-moment";
 import Footer from "../components/navigation/Footer";
+import JobDescriptionBody from "../components/misc/JobDescriptionBody";
 
 const JobOpenings = ({devApi, devURL}) => {
 
@@ -74,10 +75,9 @@ const JobSingleCard = ({job, devURL}) => {
 			{
 				showMoreInfo?
 				<div className="pt-2 pl-2 pr-1">
-					<span className="pb-2"><i>Job Description: </i>
-						<br />
-						{job.description}
-					</span>
+					<JobDescriptionBody
+						description={job.description}
+					/>
 					<div className="d-flex justify-content-end">
 						<Link to={`/dashboard/jobs/${job.job_id}`}>
 							Apply
