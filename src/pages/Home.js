@@ -14,7 +14,7 @@ const Home = () => {
 						<h2 className="header_text">Amukpe Community</h2>
 						<br />
 						<p className="subheader_text">
-							Creating Awareness and Opportunities in Amukpe Community.
+							Creating Awareness and Opportunities to Amukpe Community indigenes and indigenes of Okpe Kingdom at large.
 							Oneness is strength, love and progress.
 						</p>
 
@@ -111,8 +111,9 @@ const Home = () => {
 						<h2 className="header_text">Looking for a Job?</h2>
 						<br />
 						<p className="subheader_text">
-							The commmunity is here to help you with job opportunities, you are just one step away. We have so many job openings waiting for you. Don't miss out.
-						 	Register and start applying.
+							The commmunity is here to help you with job opportunities, you are just one step away. We have job openings that usually comes at 
+						short notice. Do not miss out. Register with your CVs, so that your CVs are readily available for submission at short notice.
+						 	Register now and start applying.
 						</p>
 
 						<br />
